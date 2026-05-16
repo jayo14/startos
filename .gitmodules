@@ -1,0 +1,3 @@
+[submodule "products/presently"]
+	path = products/presently
+	url = https://github.com/jayo14/presentlyapp
