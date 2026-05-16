@@ -1,0 +1,32 @@
+# BuildOS: Sprint Cycle Workflow
+# Tactical execution loop for Product and Engineering.
+
+name: Standard Sprint Cycle
+duration: 7 days (Monday - Sunday)
+
+phases:
+  - phase: Planning
+    day: Monday
+    activities:
+      - PM creates sprint plan based on CEO priorities.
+      - CTO reviews technical requirements.
+      - Project Manager assigns tasks to Engineering agents.
+
+  - phase: Execution
+    day: Tuesday - Thursday
+    activities:
+      - Backend/Frontend agents work on features.
+      - DevSecOps conducts security audits on active PRs.
+      - Daily standup (async) logged to outputs/sprint_summaries.
+
+  - phase: Review & QA
+    day: Friday
+    activities:
+      - UX agent verifies UI implementations.
+      - Engineering agents conduct peer reviews.
+      - Final QA pass by CTO on the staging environment.
+
+  - phase: Reporting
+    day: Friday EOD
+    activities:
+      - All agents submit weekly reports to Ops Manager.

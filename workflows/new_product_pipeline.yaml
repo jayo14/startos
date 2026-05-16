@@ -1,0 +1,43 @@
+# BuildOS: New Product Pipeline Workflow
+# This is a generic blueprint for spinning up any new product under the BuildOS venture studio.
+# Reference Example: Presently
+
+name: New Product Pipeline
+version: 1.0.0
+
+pipeline:
+  # Phase 1: Conceptualization
+  - step: Ideation & Market Fit
+    description: Strategy and Market Analyst agents research the problem space and define the "wedge."
+    outputs: [Market Analysis, Strategic Brief]
+    reference: "For Presently: Researching proxy attendance in Nigerian universities."
+
+  - step: Vision & Economics
+    description: CEO provides vision, CFO models the initial unit economics and pricing.
+    outputs: [Financial Model, Pricing Strategy]
+    reference: "For Presently: Tiered semester pricing vs per-student billing."
+
+  # Phase 2: Definition
+  - step: PRD Creation
+    description: PM Agent writes the Product Requirements Document.
+    outputs: [PRD]
+
+  - step: Architecture Design
+    description: CTO Agent defines the tech stack and high-level architecture.
+    outputs: [Architecture Decision Record (ADR), System Design]
+    reference: "For Presently: Selecting DRF + Supabase for GPS verification needs."
+
+  # Phase 3: Development (MVP)
+  - step: Sprint 0 (Setup)
+    description: DevOps sets up repos, CI/CD, and hosting (Render/Vercel).
+    outputs: [Environment Ready]
+
+  - step: Feature Development
+    description: Backend/Frontend agents implement core features in 1-week sprints.
+    outputs: [Working Features, PRs]
+
+  # Phase 4: Launch & Growth
+  - step: GTM Execution
+    description: CMO executes the launch strategy.
+    outputs: [Campaign Results, Pilot Leads]
+    reference: "For Presently: Launching the 'One Department Free' pilot via WhatsApp."
