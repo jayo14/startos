@@ -2,6 +2,11 @@
 
 | Date | Decision | Rationale | Made by |
 | :--- | :--- | :--- | :--- |
+| May 2026 | Disabled all email sending until funded | Resend free tier exhausted during Test Run 2 (~100 emails in minutes). DNS/SSL multi-provider setup too error-prone without dedicated DevOps time. Conscious tradeoff: no email = no OTP, no welcome emails, no session notifications. Acceptable for informal test. | CEO |
+| May 2026 | Signup flow proceeds without email verification | Direct consequence of email disable decision. Students can sign up and log in immediately. Reduces friction for demo onboarding. Security tradeoff accepted for pre-pilot phase. | CEO |
+| May 2026 | Render cold start partial mitigation deployed | Server wake-up call triggered on web app load before any API requests. Preloader screen added. Full fix requires paid Render tier — deferred until funding. | CTO |
+| May 2026 | 48-hour pre-demo deployment freeze policy | Last-minute push caused Render crash night before Test Run 1. Policy: no production pushes within 48 hours of a scheduled demo. Enforced by CTO agent. | CTO |
+| May 2026 | May 27th feature freeze for May 30th demo | All new features must be complete by May 27th EOD. May 28th–30th reserved for testing, hardening, and bug fixes only. | PM |
 | Foundational | **Supabase for Backend/Auth** | Integrated PostgreSQL, Auth, and Realtime features reduce maintenance overhead and speed up development. | CEO |
 | Foundational | **Django REST Framework (DRF)** | Robust, mature ecosystem for API development with strong security defaults. Preferred over FastAPI for stability and battery-included approach. | CEO |
 | Foundational | **Vite + React 19** | Modern frontend stack with high performance and support for latest React features (Server Components, improved hooks). | CEO |
