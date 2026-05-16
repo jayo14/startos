@@ -1,0 +1,29 @@
+# BuildOS: Weekly Review Workflow
+# The core operational cycle for the AI-native studio.
+
+name: Weekly Review Cycle
+schedule: "Every Friday EOD to Saturday AM"
+
+flow:
+  - time: Friday 17:00
+    action: Agent Report Generation
+    description: Every agent generates their weekly report using their specific template.
+    output_path: "agents/{role}/outputs/weekly_reports/"
+
+  - time: Friday 19:00
+    action: Digest Assembly
+    description: Ops Manager agent collects all agent reports and synthesizes the Master Weekly Digest.
+    output_path: "agents/operations/outputs/weekly_digests/"
+
+  - time: Saturday 09:00
+    action: CEO Review
+    description: CEO (Human) reviews the Master Weekly Digest and makes decisions.
+    interface: "Markdown file or Dashboard"
+
+  - time: Saturday 12:00
+    action: Decision Log Update
+    description: Ops Manager agent updates memory/decisions_log.md based on CEO feedback.
+
+  - time: Monday 09:00
+    action: Sprint Kickoff
+    description: PM Agent and Project Manager agent translate decisions into the next sprint plan.
